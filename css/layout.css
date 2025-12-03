@@ -58,3 +58,62 @@ footer {
     padding: 15px;
     border-radius: 8px;
 }
+
+/* ====== Мобільне меню ====== */
+@media (max-width: 768px) {
+
+    /* Ховаємо стандартне меню */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    /* Показуємо меню, коли активне */
+    nav.active ul {
+        display: flex;
+    }
+
+    /* Показуємо бургер */
+    .burger {
+        display: flex;
+    }
+
+    /* Анімація бургеру при відкритті */
+    .burger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* --- Маленькі мобільні (до 480px) --- */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
